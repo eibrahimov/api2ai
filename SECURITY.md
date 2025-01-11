@@ -15,7 +15,7 @@ We take the security of API2AI seriously. If you believe you have found a securi
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
-Instead, please report them via email to security@yourdomain.com (replace with actual security contact).
+Instead, please report them via email to security@api2.ai.
 
 You should receive a response within 48 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
 
