@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  api_ingestion:
+    build:
+      context: .
+      dockerfile: infra/docker/api_ingestion.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src/api_ingestion:/app/api_ingestion
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  tool_registry:
+    build:
+      context: .
+      dockerfile: infra/docker/registry.Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src/tool_registry:/app/tool_registry
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8001/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  nlp_engine:
+    build:
+      context: .
+      dockerfile: infra/docker/nlp_engine.Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - ./src/nlp_engine:/app/nlp_engine
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8002/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  ai_agent_bridge:
+    build:
+      context: .
+      dockerfile: infra/docker/bridge.Dockerfile
+    ports:
+      - "8003:8003"
+    environment:
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./src/ai_agent_bridge:/app/ai_agent_bridge
+    depends_on:
+      - api_ingestion
+      - tool_registry
+      - nlp_engine
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8003/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+networks:
+  default:
+    name: api2ai_network

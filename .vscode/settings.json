@@ -1,0 +1,247 @@
+{
+    // miscellaneous
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // window
+    "window.title": "☂️ - ${activeEditorShort}${separator}${rootName} - ☂️",
+    "window.clickThroughInactive": false,
+
+    // workbench
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.editor.wrapTabs": true,
+    "workbench.tree.indent": 20,
+    "workbench.colorCustomizations": {
+      "tree.indentGuidesStroke": "#5c4f67"
+    },
+    "workbench.editor.labelFormat": "short",
+
+    // editor
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Monaspace Krypton', 'Dank Mono', Consolas, monospace",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.5,
+    "editor.letterSpacing": 0.5,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "editor.wordBasedSuggestions": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "breadcrumbs.enabled": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnPaste": true,
+
+    "[rust]": {
+      "editor.defaultFormatter": "rust-lang.rust-analyzer"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // inlay hints
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterNames.enabled": "all",
+
+    // files
+    "files.autoSave": "onFocusChange",
+    "files.trimTrailingWhitespace": true,
+    "files.defaultLanguage": "plaintext",
+    "files.exclude": {
+      "**/.history": true,
+      "**/.git": true,
+      "**/.cache": true,
+      "**/vendors": true,
+      "**/build": true,
+      "**/dist": false,
+      "**/coverage": true,
+      "**/*.pyc": true,
+      "**/false": true
+    },
+    "files.associations": {
+      "*.{js,jsx}": "javascriptreact",
+      "*.webc": "html",
+      "*.mdx": "markdown",
+      "*.mdoc": "markdown",
+      ".env*": "dotenv"
+    },
+
+    // search
+    "search.exclude": {
+      "**/.history": true,
+      "**/.git": true,
+      "**/.cache": true,
+      "**/vendors": true,
+      "**/build": true,
+      "**/dist": true,
+      "**/coverage": true,
+      "**/*.pyc": true,
+      "**/false": true,
+      "**/node_modules": false
+    },
+    "search.smartCase": true,
+
+    // emmet
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "erb": "html",
+      "rhtml": "html"
+    },
+
+    // terminal
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.external.osxExec": "Warp.app",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.fontFamily": "'Monaspace Krypton', 'Dank Mono', Consolas, monospace",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.fontSize": 16,
+
+    // explorer
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": true,
+
+    // live share
+    "liveshare.guestApprovalRequired": true,
+
+    // live server
+    "liveServer.settings.donotVerifyTags": true,
+
+    // prettier
+    "prettier.requireConfig": true,
+
+    // gitlens
+    "gitlens.keymap": "alternate",
+
+    // github pull request
+    "extensions.confirmedUriHandlerExtensionIds": [
+      "GitHub.vscode-pull-request-github"
+    ],
+
+    // markdown preview
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.fontFamily": "'Monaspace Krypton', 'Dank Mono', Consolas, monospace",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "name": "envKeys",
+          "scope": "string.quoted.double.env,string.quoted.single.env,source.env,constant.numeric.env",
+          "settings": {
+            "foreground": "#19354900"
+          }
+        },
+        {
+          "scope": "keyword.other.dotenv",
+          "settings": {
+            "foreground": "#FF000000"
+          }
+        }
+      ]
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontWeight": "normal",
+    "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Git integation
+    // "git.mergeEditor": true,
+    "githubPullRequests.pullBranch": "never",
+    "workbench.sideBar.location": "right",
+    "workbench.layoutControl.enabled": false,
+
+    "terminal.integrated.autoReplies": {
+      "dotenv: found '.env' file. Source it? ([Y]es/[n]o/[a]lways/n[e]ver)": "e\r"
+    },
+    "editor.stickyScroll.enabled": true,
+    "[yaml]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "redhat.telemetry.enabled": false,
+    "editor.wordWrap": "on",
+    "totalTypeScript.hideAllTips": false,
+    "totalTypeScript.hideBasicTips": true,
+    "explorer.compactFolders": false,
+    "[astro]": {
+      "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "window.commandCenter": true,
+    "editor.accessibilitySupport": "off",
+    "errorLens.excludeBySource": [
+      "eslint(unicorn/no-for-loop)",
+      "eslint(no-shadow)"
+  ],
+  "zenMode.showTabs": "none"
+  }
