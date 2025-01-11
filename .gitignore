@@ -86,7 +86,7 @@ temp/
 # Documentation
 /site
 docs/_build/
-docs
+docs/private/
 
 # Jupyter Notebook
 .ipynb_checkpoints
